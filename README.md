@@ -4,7 +4,7 @@
 </p>
 
 ## Day 1 Labs
-### [Messaging Fundamentals Labs]()
+### [Messaging Fundamentals Labs](/labs/messaging-fundamentals/README.md)
 ### Messaging Service & Copilot Labs
 ### Notify Labs
 ### Proxy Lab
