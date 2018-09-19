@@ -12,4 +12,3 @@ Welcome to Twilio Build Certification for Partners. Over the next three days you
 ### [Proxy Lab](/labs/proxy/README.md)
 ## Twilio Build Certification - Days 2 and 3
 ### [Contact Center Labs](/labs/contact-center/README.md)
-
