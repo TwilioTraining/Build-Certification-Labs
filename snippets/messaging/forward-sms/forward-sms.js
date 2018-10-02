@@ -15,3 +15,14 @@ app.post('/sms', (req, res) => {
 
   res.send(response.toString());
 });
+
+/*
+TwiML Oubput Example
+
+<Response>
+  <Message to="+15559997878">
+    <Body>From: +15554441212 Message: Forwarded message</Body>
+  </Message>
+</Response>
+
+*/
