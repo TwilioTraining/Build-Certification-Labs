@@ -19,7 +19,7 @@ app.post('/sms', (req, res) => {
 });
 
 /*
-TwiML Oubput Example
+TwiML Output Example
 
 <Response>
   <Message to="+15559997878">
