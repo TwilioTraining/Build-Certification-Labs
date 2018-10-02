@@ -1,3 +1,5 @@
+// npm requirements - express, body-parser, twilio
+
 const express = require('express');
 const bodyParser = require('body-parser');
 
