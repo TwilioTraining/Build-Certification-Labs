@@ -1,5 +1,4 @@
 <?php
-
 header('Content-type: application/xml');
 
 require 'vendor/autoload.php';
