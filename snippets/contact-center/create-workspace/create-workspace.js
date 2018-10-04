@@ -4,7 +4,6 @@ const client = require('twilio')(accountSid, authToken);
 
 client.taskrouter.workspaces
                  .create({
-                    eventCallbackUrl: 'http://requestb.in/vh9reovh',
                     template: 'FIFO',
                     friendlyName: 'NewWorkspace'
                   })
