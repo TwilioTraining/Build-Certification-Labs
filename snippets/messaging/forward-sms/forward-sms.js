@@ -22,15 +22,3 @@ app.post('/forward', (req, res) => {
 http.createServer(app).listen(1337, () => {
   console.log('Express server listening on port 1337');
 });
-
-
-/*
-TwiML Output Example at localhost:1337/forward
-
-<Response>
-  <Message to="+15559997878">
-    <Body>From: +15554441212 Message: Forwarded message</Body>
-  </Message>
-</Response>
-
-*/
