@@ -14,7 +14,7 @@ public class conference {
         VoiceResponse response = new VoiceResponse.Builder().dial(dial).build();
 
         try {
-            System.out.println("+ TwiML: " + response.toXml());
+            System.out.println(response.toXml());
         } catch (TwiMLException e) {
             e.printStackTrace();
         }
