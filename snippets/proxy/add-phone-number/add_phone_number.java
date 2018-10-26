@@ -12,7 +12,7 @@ public class add_phone_number {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
         PhoneNumber phoneNumber = 
-            PhoneNumber.creator("KSxxxxxxxxxxxxxxxxxxxxxxxxxx")
+            PhoneNumber.creator(System.getenv("PROXY_SERVICE_SID"))
             .setSid("PNxxxxxxxxxxxxxxxxxxxxxxx")
             .create();
         System.out.println("+ Into the Proxy service, added phone number: " + phoneNumber.getSid());
