@@ -1,5 +1,3 @@
-package proxy;
-
 import com.twilio.Twilio;
 import com.twilio.rest.proxy.v1.service.Session;
 
