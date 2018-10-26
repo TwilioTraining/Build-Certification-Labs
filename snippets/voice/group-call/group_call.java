@@ -1,5 +1,3 @@
-package javatwsamples.voice;
-
 import com.twilio.twiml.voice.Dial;
 import com.twilio.twiml.VoiceResponse;
 import com.twilio.twiml.TwiMLException;
