@@ -1,5 +1,3 @@
-package javatwsamples;
-
 import com.twilio.Twilio;
 import com.twilio.base.ResourceSet;
 import com.twilio.rest.api.v2010.account.IncomingPhoneNumber;
