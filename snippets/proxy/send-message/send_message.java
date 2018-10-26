@@ -18,8 +18,6 @@ public class send_message {
                 "Reply to this message to chat!")
             .create();
 
-        System.out.println(messageInteraction.getSid());
-
         System.out.println("+ Proxy service session, message interaction SID: " + messageInteraction.getSid());
     }
 }
