@@ -1,30 +1,31 @@
-import java.util.*;
-import com.twilio.sdk.*;
-import com.twilio.sdk.resource.factory.*;
-import com.twilio.sdk.resource.instance.*;
-import com.twilio.sdk.resource.list.*;
-import java.util.ArrayList;
-import java.util.List;
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
+import com.twilio.Twilio;
+import com.twilio.rest.api.v2010.account.Message;
+import com.twilio.type.PhoneNumber;
 
-public class TwilioTest {
-  // Find your Account Sid and Token at twilio.com/user/account
-  public static final String ACCOUNT_SID = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-  public static final String AUTH_TOKEN = "your_auth_token";
+public class send_sms {
 
-  public static void main(String[]args) throws TwilioRestException {
-    TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
+    private static final String ACCOUNT_SID = System.getenv("ACCOUNT_SID");
+    private static final String AUTH_TOKEN = System.getenv("AUTH_TOKEN");
 
-    // Build the parameters
-    List<NameValuePair> params = new ArrayList<NameValuePair>();
-    params.add(new BasicNameValuePair("To", "+15558675310"));
-    params.add(new BasicNameValuePair("MessagingServiceSid", "MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"));
-    params.add(new BasicNameValuePair("Body",
-      "Phantom Menace was clearly the best of the prequel trilogy."));
+    public static void main(String[] args) {
 
-    MessageFactory messageFactory = client.getAccount().getMessageFactory();
-    Message message = messageFactory.create(params);
-    System.out.println(message.getSid());
-  }
+        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+      
+        // The fromPhoneNumber is selected from the Messaging Service pool of numbers.
+        String fromPhoneNumber = "MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        String toPhoneNumber = System.getenv("PHONE_NUMBER3");
+        String theMsg = "Phantom Menace was clearly the best of the prequel trilogy.";
+        Message message
+                = Message.creator(
+                        new PhoneNumber(toPhoneNumber),
+                        new PhoneNumber(fromPhoneNumber),
+                        theMsg
+                ).create();
+        System.out.print("+ Message SID: " + message.getSid());
+        System.out.print("+ from: " + fromPhoneNumber);
+        System.out.print(", to: " + message.getTo());
+        System.out.print(", Status: " + message.getStatus());
+        System.out.print(", " + message.getBody());
+        System.out.println("");
+    }
 }
