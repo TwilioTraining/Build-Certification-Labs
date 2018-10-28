@@ -13,7 +13,7 @@ public class send_sms {
       
         // The fromPhoneNumber is selected from the Messaging Service pool of numbers.
         String fromPhoneNumber = "MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-        String toPhoneNumber = System.getenv("PHONE_NUMBER3");
+        String toPhoneNumber = "+15558675310";
         String theMsg = "Phantom Menace was clearly the best of the prequel trilogy.";
         Message message
                 = Message.creator(
