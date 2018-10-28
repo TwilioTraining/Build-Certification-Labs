@@ -13,7 +13,7 @@ public class create_participants {
         Participant participant = Participant.creator(
                 System.getenv("PROXY_SERVICE_SID"),
                 "KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-                System.getenv("PHONE_NUMBER3")
+                "+15558675310"
         )
                 .setFriendlyName("Alice").create();
 

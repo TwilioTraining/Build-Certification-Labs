@@ -11,8 +11,8 @@ public class send_mms {
 
     public static void main(String[] args) {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
-        String fromPhoneNumber = System.getenv("PHONE_NUMBER2");
-        String toPhoneNumber = System.getenv("PHONE_NUMBER3");
+        String fromPhoneNumber = "+15017122661";
+        String toPhoneNumber = "+15558675310";
         String theMsg = "This is the ship that made the Kessel Run in fourteen parsecs?";
         Message message
                 = Message.creator(
