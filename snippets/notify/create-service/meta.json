@@ -1,0 +1,9 @@
+{
+  "type": "server",
+  "title": "Build - Notify - Create a Service",
+  "method": "post",
+  "domain": "notify",
+  "version": "v1",
+  "resource": "service",
+  "action": "create"
+}
