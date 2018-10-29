@@ -1,0 +1,24 @@
+{
+  "sid": "NOXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "service_sid": "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "date_created": "2016-03-24T23:42:28Z",
+  "identities": [
+    "jing"
+  ],
+  "tags": [],
+  "segments": [],
+  "priority": "high",
+  "ttl": 2419200,
+  "title": "test",
+  "body": "Knok-Knok! This is your first Notify SMS",
+  "sound": null,
+  "action": null,
+  "data": null,
+  "apn": null,
+  "fcm": null,
+  "gcm": null,
+  "sms": null,
+  "facebook_messenger": null,
+  "alexa": null
+}

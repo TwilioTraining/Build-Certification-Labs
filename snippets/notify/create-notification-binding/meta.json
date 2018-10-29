@@ -1,0 +1,9 @@
+{
+  "type": "server",
+  "title": "Build - Notify - Send a Notification to Binding",
+  "method": "post",
+  "domain": "notify",
+  "version": "v1",
+  "resource": "notification",
+  "action": "create"
+}

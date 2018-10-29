@@ -1,0 +1,9 @@
+{
+  "type": "server",
+  "title": "Build - Notify - Create a Binding for SMS",
+  "method": "post",
+  "domain": "notify",
+  "version": "v1",
+  "resource": "binding",
+  "action": "create"
+}
