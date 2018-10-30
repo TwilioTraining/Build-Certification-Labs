@@ -14,6 +14,10 @@ public class Example {
                 "+1651000000000")
             .create();
 
-        System.out.println(binding.getSid());
+        System.out.print("+ Binding SID: " + binding.getSid());
+        System.out.print("+ Identity: " + binding.getIdentity());
+        System.out.print("+ Binding type: " + binding.getBindingType());
+        System.out.print("+ Address: " + binding.getAddress());
+        System.out.println("");
     }
 }
