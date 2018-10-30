@@ -13,6 +13,7 @@ public class Example {
         
         List<String> listSendTo = new ArrayList<>();
         listSendTo.add("{\"binding_type\":\"sms\", \"address\":\"+1651000000000\"}");
+        listSendTo.add("{\"binding_type\":\"sms\", \"address\":\"+1651000000001\"}");
         Notification notification = 
             Notification.creator("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
             .setBody("Knok-Knok! This is your first Notify SMS")
