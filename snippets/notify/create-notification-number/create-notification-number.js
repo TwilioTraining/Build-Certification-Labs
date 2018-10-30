@@ -6,10 +6,16 @@ client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .notifications.create({
     body: 'Knok-Knok! This is your first Notify SMS',
-    toBinding: JSON.stringify({
-      binding_type: 'sms',
-      address: '+1651000000000'
-    })
+    toBinding: [
+      JSON.stringify({
+        binding_type: 'sms',
+        address: '+1651000000000'
+      }),
+      JSON.stringify({
+        binding_type: 'sms',
+        address: '+1651000000001'
+      })
+    ]
   })
   .then(notification => console.log(notification.sid))
   .done();
