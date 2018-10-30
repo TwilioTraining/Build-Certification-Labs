@@ -12,6 +12,9 @@ public class Example {
             .setFriendlyName("My Notify Service")
             .create();
 
-        System.out.println(service.getSid());
+        System.out.print("+ Notify Service SID: " + service.getSid());
+        System.out.print("+ Messaging Service SID: " + service.getMessagingServiceSid());
+        System.out.print("+ Service SID: " + service.getFriendlyName());
+        System.out.println("");
     }
 }
