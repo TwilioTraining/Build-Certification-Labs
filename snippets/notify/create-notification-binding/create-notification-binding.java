@@ -14,6 +14,9 @@ public class Example {
             .setIdentity(Promoter.listOfOne("00000001"))
             .create();
 
-        System.out.println(notification.getSid());
+        System.out.print("+ Notification SID: " + notification.getSid());
+        System.out.print(", Text: " + notification.getBody());
+        System.out.print(", Date: " + notification.getDateCreated());
+        System.out.println("");
     }
 }
