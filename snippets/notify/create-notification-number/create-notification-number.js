@@ -9,8 +9,7 @@ client.notify
     toBinding: JSON.stringify({
       binding_type: 'sms',
       address: '+1651000000000'
-    }),
-    identity: ['identity']
+    })
   })
   .then(notification => console.log(notification.sid))
   .done();
