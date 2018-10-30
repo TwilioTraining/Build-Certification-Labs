@@ -15,9 +15,9 @@ public class Example {
             .create();
 
         System.out.print("+ Binding SID: " + binding.getSid());
-        System.out.print("+ Identity: " + binding.getIdentity());
-        System.out.print("+ Binding type: " + binding.getBindingType());
-        System.out.print("+ Address: " + binding.getAddress());
+        System.out.print(", Identity: " + binding.getIdentity());
+        System.out.print(", Binding type: " + binding.getBindingType());
+        System.out.print(", Address: " + binding.getAddress());
         System.out.println("");
     }
 }
