@@ -19,6 +19,11 @@ class Program
             {
                 {"binding_type", "sms"},
                 {"address", "+1651000000000"}
+            }, Formatting.Indented),
+            JsonConvert.SerializeObject(new Dictionary<string, Object>()
+            {
+                {"binding_type", "sms"},
+                {"address", "+1651000000001"}
             }, Formatting.Indented)
         };
 
