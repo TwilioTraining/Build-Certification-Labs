@@ -1,6 +1,6 @@
 {
   "type": "server",
-  "title": "Build - Notify - Send a Notification to Number",
+  "title": "Build - Notify - Send Notification to Numbers",
   "method": "post",
   "domain": "notify",
   "version": "v1",
