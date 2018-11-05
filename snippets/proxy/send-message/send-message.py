@@ -14,6 +14,7 @@ message_interaction = client.proxy \
                    .services(proxy_sid) \
                    .sessions(session_sid) \
                    .participants(participant_sid) \
+                   .message_interactions \
                    .create(body='Reply to this message to chat!')
 
 print(message_interaction.sid)
