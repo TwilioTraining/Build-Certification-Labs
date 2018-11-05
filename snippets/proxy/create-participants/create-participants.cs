@@ -13,4 +13,4 @@ var participant = ParticipantResource.Create(
     pathSessionSid: "KCXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 );
 
-Console.WriteLine(participant.ProxyIdentifier);
+Console.WriteLine(participant.sid);
