@@ -10,11 +10,16 @@ notification = @client.notify
                       .notifications
                       .create(
                          body: 'Knok-Knok! This is your first Notify SMS',
-                         to_binding: {
-                           'binding_type' => 'sms',
-                           'address' => '+1651000000000'
-                       }.to_json,
-                         identity: ['identity']
-                       )
+                         to_binding: [
+                         	 {
+                             'binding_type' => 'sms',
+                             'address' => '+1651000000000'
+                           }.to_json,
+                           {
+                             'binding_type' => 'sms',
+                             'address' => '+1651000000001'
+                          }.to_json
+                        ]
+                      )
 
 puts notification.sid
