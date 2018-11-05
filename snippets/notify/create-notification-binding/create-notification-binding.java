@@ -8,11 +8,14 @@ public class Example {
 
     public static void main(String[] args) {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
-        Notification notification = 
-            Notification.creator("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-            .setBody("Hello Bob")
-            .setIdentity(Promoter.listOfOne("00000001"))
-            .create();
+        
+        List<String> listSendTo = new ArrayList<>();
+        listSendTo.add("00000001");
+        // listSendTo.add("00000002");
+        Notification notification =
+                Notification.creator("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+                        .setBody("Hello all.")
+                        .setIdentity( listSendTo ).create();
 
         System.out.print("+ Notification SID: " + notification.getSid());
         System.out.print(", Text: " + notification.getBody());
