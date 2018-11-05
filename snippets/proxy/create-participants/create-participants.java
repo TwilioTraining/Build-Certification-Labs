@@ -17,6 +17,6 @@ public class create_participants {
         )
                 .setFriendlyName("Alice").create();
 
-        System.out.println("+ Participant added to Proxy service session, ProxyIdentifier: " + participant.getProxyIdentifier());
+        System.out.println("+ Participant added to Proxy service session, ProxyIdentifier: " + participant.getSid());
     }
 }
