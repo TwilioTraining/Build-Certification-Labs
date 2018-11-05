@@ -13,7 +13,7 @@ app.use('/group_call', function(req, res) {
         to: number,
         from: '+15017122661',
       })
-      .then(call => process.stdout.write(call.sid));
+      .then(call => console.log(call.sid));
 
   });
 
