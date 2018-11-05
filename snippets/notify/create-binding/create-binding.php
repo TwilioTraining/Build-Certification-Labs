@@ -9,6 +9,9 @@ $twilio = new Client($sid, $token);
 
 $binding = $twilio->notify->v1->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
                               ->bindings
-                              ->create("00000001", "sms", "+1651000000000");
+                              ->create("00000001", "sms", "+1651000000000",
+                                       array(
+                                           "tag" => "sales"
+                                       ));
 
 print($binding->sid);

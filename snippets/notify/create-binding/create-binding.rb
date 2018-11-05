@@ -10,6 +10,7 @@ binding = @client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                         .create(
                            identity: '00000001',
                            binding_type: 'sms',
+                           tag: 'sales',
                            address: '+1651000000000'
                          )
 

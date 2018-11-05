@@ -7,7 +7,8 @@ client.notify.services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
              .create({
                 identity: '00000001',
                 bindingType: 'sms',
-                address: '+1651000000000'
+                address: '+1651000000000',
+                tag: ['sales']
               })
              .then(binding => console.log(binding.sid))
              .done();

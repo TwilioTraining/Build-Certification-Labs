@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Twilio;
 using Twilio.Rest.Notify.V1.Service;
 
@@ -14,6 +15,7 @@ class Program
     var binding = BindingResource.Create(
         identity: "00000001",
         bindingType: BindingResource.BindingTypeEnum.Sms,
+        tag: new List<string>{"sales"},
         address: "+1651000000000",
         pathServiceSid: "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     );
