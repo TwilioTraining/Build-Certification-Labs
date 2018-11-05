@@ -1,6 +1,6 @@
 {
   "type": "server",
-  "title": "Build - Notify - Send a Notification to Binding",
+  "title": "Build - Notify - Send Notification to Bindings",
   "method": "post",
   "domain": "notify",
   "version": "v1",
