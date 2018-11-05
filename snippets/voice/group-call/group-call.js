@@ -17,5 +17,4 @@ app.use('/group_call', function(req, res) {
 
   });
 
-}
-       )
+})
