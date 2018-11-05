@@ -9,6 +9,6 @@ def dial_group():
    for number in numbers:
        client.calls.create(
            from_ = caller_id,
-           to=number.from_,
+           to=number,
            url='http://916d20ff.ngrok.io/conference'
        )
