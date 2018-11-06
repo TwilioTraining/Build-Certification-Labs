@@ -6,5 +6,5 @@ def acceptTask():
         'from': caller_id,
         'post_work_activity_sid': wrapup_sid
     }
-
+    # You'll need to use: from flask import jsonify
     return jsonify(dequeue)
