@@ -11,7 +11,7 @@ worker = client.taskrouter \
                .workspaces('WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
                .workers \
                .create(attributes=json.dumps({
-                    skills: 'support'
+                    'skills': 'support'
                 }), friendly_name='Support Worker 1')
 
 print(worker.sid)
