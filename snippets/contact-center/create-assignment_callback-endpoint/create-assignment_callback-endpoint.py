@@ -1,4 +1,10 @@
 @app.route("/assignment_callback", methods=['GET', 'POST'])
 def acceptTask():
-    dequeue = '{"instruction": "dequeue", "from": "'+ caller_id +'", "post_work_activity_sid": "' + wrapUp +'" }'
-    return Response(dequeue, mimetype='application/json')
+    caller_id = '+61488842741'
+    dequeue = {
+        'instruction': 'dequeue',
+        'from': caller_id,
+        'post_work_activity_sid': wrapup_sid
+    }
+
+    return jsonify(dequeue)
