@@ -1,6 +1,6 @@
 app.use('/assignment_callback', function(req, res){
-
-dequeue = {"instruction": "dequeue", "from": caller_id, "post_work_activity_sid": wrap_up}
+// add your Twilio phone number and WrapUp activity sid 
+dequeue = {"instruction": "dequeue", "from": "+12345678910", "post_work_activity_sid": "WAXXXXXXXXXXXXXXXXXXXXX"}
 
 res.type('application/json');
 
