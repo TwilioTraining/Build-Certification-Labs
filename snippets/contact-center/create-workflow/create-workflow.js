@@ -30,10 +30,10 @@ client.taskrouter.workspaces('WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                  },
 		    {
 
-                     expression: `selected_product==manager`,
+                     expression: `selected_product=='manager'`,
                      targets: [
                        {
-                           Queue: manager_taskqueue_sid
+                           queue: manager_taskqueue_sid
                        }
                      ]
                  }
