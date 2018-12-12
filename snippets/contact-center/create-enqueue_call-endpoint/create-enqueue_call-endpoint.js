@@ -1,3 +1,8 @@
+const bodyParser = require('body-parser');
+const VoiceResponse = require('twilio').twiml.VoiceResponse;
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use('/enqueue_call', function(req, res){
 
 const response = new VoiceResponse();
