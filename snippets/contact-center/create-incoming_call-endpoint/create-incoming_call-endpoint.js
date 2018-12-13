@@ -1,4 +1,5 @@
 app.use('/incoming_call', function(req, res) {
+  const VoiceResponse = require('twilio').twiml.VoiceResponse;
   const response = new VoiceResponse();
   const gather = response.gather({
     input: 'speech dtmf',
