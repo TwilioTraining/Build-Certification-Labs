@@ -1,8 +1,3 @@
-/*
- * Note: This is Component is INCOMPLETE and will not function as is.
- * Complete the challenges marked with ✏️ to fix it!
- */
-
 import React from 'react';
 import { withTheme, withTaskContext } from '@twilio/flex-ui';
 import styled from "react-emotion";
@@ -12,11 +7,7 @@ const CRM_baseurl = 'https://owlcrm.herokuapp.com/';
 
 class CustomCRM extends React.Component {
   render() {
-    /*
-     * ✏️ Challenge 1/5: retrieve Task data from props
-     */
-    const { task } = {};
-
+    const { task } = this.props;
     let content;
     if (!task || !task.attributes) {
       content = <CRMContainer>
@@ -45,12 +36,7 @@ class CustomCRM extends React.Component {
           <Value>Customer Profile</Value>
         </Header></HeaderLine>
         <LargeCaption>
-          {
-            /*
-            * ✏️ Challenge 2/5: retrieve customer's first and last name from Task attributes
-            */
-            'FirstName LastName'
-          }
+          {task.attributes.account_data.first_name} {task.attributes.account_data.last_name}
         </LargeCaption>
         <div>
           <Label>Address</Label>
@@ -82,13 +68,13 @@ class CustomCRM extends React.Component {
 }
 
 const Label = styled("h1")`
-  color: ${'black' /* ✏️ Challenge 3/5: replace 'black' with some theme color, e.g. color.base7 */};
+  color: ${props => props.theme.colors.base7};
   letter-spacing: 2px;
   padding-top: 15px;
 `;
 
 const Value = styled("div")`
-  color: ${'black' /* ✏️ Challenge 4/5: replace 'black' with some theme color, e.g. color.base8 */};
+  color: ${props => props.theme.colors.base8};
 `;
 
 const HeaderLine = styled("div")`
@@ -149,7 +135,7 @@ const Canvas = styled("div")`
 `;
 
 const CRMContainer = styled("div")`
-  color: ${'black' /* ✏️ Challenge 5/5: replace 'black' with some theme color, e.g. calculated.textColor */};
+  color: ${props => props.theme.calculated.textColor};
   align-items: center;
   display: flex;
   flex-basis: auto;
