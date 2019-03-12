@@ -56,7 +56,11 @@ class CustomCRM extends React.Component {
           <Label>Address</Label>
         </div><div>
           <Value>{task.attributes.account_data.address}</Value>
-          <Value>{task.attributes.account_data.city}, {task.attributes.account_data.state}, {task.attributes.account_data.zip}</Value>
+          <Value>
+            {task.attributes.account_data.city},&nbsp;
+            {task.attributes.account_data.state},&nbsp;
+            {task.attributes.account_data.zip}
+          </Value>
         </div>
         <div>
           <Label>Date of Birth</Label>
@@ -82,7 +86,12 @@ class CustomCRM extends React.Component {
 }
 
 const Label = styled("h1")`
-  color: ${'black' /* ✏️ Challenge 3/5: replace 'black' with some theme color, e.g. color.base7 */};
+  color: ${'black' /*
+                    * ✏️ Challenge 3/5: 
+                    *      Replace 'black' with some theme color, e.g. color.base7
+                    *      (you've already done this in previous exercise which used 
+                    *      theme color MainHeader.Container.background).
+                    */};
   letter-spacing: 2px;
   padding-top: 15px;
 `;
