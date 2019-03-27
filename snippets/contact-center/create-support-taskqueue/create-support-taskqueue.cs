@@ -15,8 +15,6 @@ class Program
     var taskQueue = TaskQueueResource.Create(
         targetWorkers: "skills HAS \"support\"",
         friendlyName: "Support",
-        reservationActivitySid: "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        assignmentActivitySid: "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         pathWorkspaceSid: "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     );
 

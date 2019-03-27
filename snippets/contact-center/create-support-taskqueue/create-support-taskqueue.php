@@ -14,8 +14,6 @@ $task_queue = $twilio->taskrouter->v1->workspaces("WSXXXXXXXXXXXXXXXXXXXXXXXXXXX
   ->taskQueues
   ->create(
     "Support", // friendlyName
-    "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", // reservationActivitySid
-    "WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", // assignmentActivitySid
     array(
       "targetWorkers" => "skills HAS \"support\""
     )

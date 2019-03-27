@@ -11,6 +11,4 @@ task_queue = client.taskrouter \
     .task_queues \
     .create(
          target_workers='skills HAS "support"',
-         friendly_name='support',
-         reservation_activity_sid='WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-         assignment_activity_sid='WAXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+         friendly_name='support')
