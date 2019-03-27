@@ -13,7 +13,9 @@ const CRM_baseurl = 'https://owlcrm.herokuapp.com/';
 class CustomCRM extends React.Component {
   render() {
     /*
-     * ✏️ Challenge 1/5: retrieve Task data from props
+     * ✏️ Challenge 1/5:
+     * Retrieve Task data from props
+     * const { task } = this.???;
      */
     const { task } = {};
 
@@ -47,7 +49,9 @@ class CustomCRM extends React.Component {
         <LargeCaption>
           {
             /*
-            * ✏️ Challenge 2/5: retrieve customer's first and last name from Task attributes
+            * ✏️ Challenge 2/5:
+            * Retrieve customer's first and last name from Task attributes
+            * task.attributes.???.first_name + " " + task.attributes.???.last_name
             */
             'FirstName LastName'
           }
@@ -88,9 +92,8 @@ class CustomCRM extends React.Component {
 const Label = styled("h1")`
   color: ${'black' /*
                     * ✏️ Challenge 3/5: 
-                    *      Replace 'black' with some theme color, e.g. color.base7
-                    *      (you've already done this in previous exercise which used 
-                    *      theme color MainHeader.Container.background).
+                    * Replace 'black' with some theme color, e.g. color.base7
+                    * color: ${props => props.theme.??? };
                     */};
   letter-spacing: 2px;
   padding-top: 15px;
