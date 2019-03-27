@@ -56,9 +56,6 @@ $workflow = $twilio->taskrouter->v1
    )
  ), // configuration
  array(
-     "assignmentCallbackUrl" => "",
-     "fallbackAssignmentCallbackUrl" => "",
-     "taskReservationTimeout" => 30
  )
 );
 

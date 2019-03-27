@@ -69,9 +69,6 @@ class Program
         }, Formatting.Indented);
 
         var workflow = WorkflowResource.Create(
-            assignmentCallbackUrl: new Uri("http://example.com"),
-            fallbackAssignmentCallbackUrl: new Uri("http://example2.com"),
-            taskReservationTimeout: 30,
             friendlyName: "Sales, Marketing, Support Workflow",
             configuration: configuration,
             pathWorkspaceSid: "WSXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
