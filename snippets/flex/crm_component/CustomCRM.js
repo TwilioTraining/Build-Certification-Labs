@@ -92,7 +92,7 @@ class CustomCRM extends React.Component {
 const Label = styled("h1")`
   color: ${'black' /*
                     * ✏️ Challenge 3/5: 
-                    * Replace 'black' with some theme color, e.g. color.base7
+                    * Replace 'black' with some theme color, e.g. colors.base7
                     * color: ${props => props.theme.??? };
                     */};
   letter-spacing: 2px;
@@ -100,7 +100,7 @@ const Label = styled("h1")`
 `;
 
 const Value = styled("div")`
-  color: ${'black' /* ✏️ Challenge 4/5: replace 'black' with some theme color, e.g. color.base8 */};
+  color: ${'black' /* ✏️ Challenge 4/5: replace 'black' with some theme color, e.g. colors.base8 */};
 `;
 
 const HeaderLine = styled("div")`
