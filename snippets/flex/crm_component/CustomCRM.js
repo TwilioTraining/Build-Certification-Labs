@@ -13,7 +13,7 @@ const CRM_baseurl = 'https://owlcrm.herokuapp.com/';
 class CustomCRM extends React.Component {
   render() {
     /*
-     * ✏️ Challenge 1/5:
+     * ✏️ Challenge 1/3:
      * Retrieve Task data from props
      * const { task } = this.???;
      */
@@ -21,25 +21,25 @@ class CustomCRM extends React.Component {
 
     let content;
     if (!task || !task.attributes) {
-      content = <CRMContainer>
+      content = <CustomCRMContainer>
         <HeaderLine><Header>
           <span>Custom CRM</span>
         </Header></HeaderLine>
         <LargeCaption>
           No task selected
         </LargeCaption>
-      </CRMContainer>
+      </CustomCRMContainer>
     } else if (!task.attributes.account_data) {
-      content = <CRMContainer>
+      content = <CustomCRMContainer>
         <HeaderLine><Header>
           <span>Custom CRM</span>
         </Header></HeaderLine>
         <LargeCaption>
           No customer data found
         </LargeCaption>
-      </CRMContainer>
+      </CustomCRMContainer>
     } else {
-      content = <CRMContainer>
+      content = <CustomCRMContainer>
         <div>
           <ProfilePhoto alt="" src={CRM_baseurl + task.attributes.account_data.img_src}></ProfilePhoto>
         </div>
@@ -49,8 +49,8 @@ class CustomCRM extends React.Component {
         <LargeCaption>
           {
             /*
-            * ✏️ Challenge 2/5:
-            * Retrieve customer's first and last name from Task attributes
+            * ✏️ Challenge 2/3:
+            * Retrieve customer's first and last name from Task attributes's `account_data` key
             * task.attributes.???.first_name + " " + task.attributes.???.last_name
             */
             'FirstName LastName'
@@ -81,7 +81,7 @@ class CustomCRM extends React.Component {
         </div><div>
           <Value>{task.attributes.account_data.account_balance}</Value>
         </div>
-      </CRMContainer>;
+      </CustomCRMContainer>;
     }
     return <Canvas>
       {content}
@@ -90,17 +90,13 @@ class CustomCRM extends React.Component {
 }
 
 const Label = styled("h1")`
-  color: ${'black' /*
-                    * ✏️ Challenge 3/5: 
-                    * Replace 'black' with some theme color, e.g. colors.base7
-                    * color: ${props => props.theme.??? };
-                    */};
+  color: ${props => props.theme.colors.base7};
   letter-spacing: 2px;
   padding-top: 15px;
 `;
 
 const Value = styled("div")`
-  color: ${'black' /* ✏️ Challenge 4/5: replace 'black' with some theme color, e.g. colors.base8 */};
+  color: ${props => props.theme.colors.base8};
 `;
 
 const HeaderLine = styled("div")`
@@ -160,8 +156,12 @@ const Canvas = styled("div")`
   background-color: ${props => props.theme.TaskCanvas.Container.background};
 `;
 
-const CRMContainer = styled("div")`
-  color: ${'black' /* ✏️ Challenge 5/5: replace 'black' with some theme color, e.g. calculated.textColor */};
+const CustomCRMContainer = styled("div")`
+  color: ${'MidnightBlue' /*
+  * ✏️ Challenge 3/3: 
+  * Replace 'MidnightBlue' with some theme color, e.g. calculated.textColor
+  * color: ${props => props.theme.??? };
+  */};
   align-items: center;
   display: flex;
   flex-basis: auto;

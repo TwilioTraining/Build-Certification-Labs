@@ -1,3 +1,8 @@
+/*
+ * Note: This is Component is INCOMPLETE and will not function as is.
+ * Complete the challenges marked with ✏️ to fix it!
+ */
+
 import React from 'react';
 import { withTheme, withTaskContext } from '@twilio/flex-ui';
 import styled from "react-emotion";
@@ -7,28 +12,34 @@ const CRM_baseurl = 'https://owlcrm.herokuapp.com/';
 
 class CustomCRM extends React.Component {
   render() {
+    /*
+     * ✏️ Challenge 1/3:
+     * Retrieve Task data from props
+     * const { task } = this.???;
+     */
     const { task } = this.props;
+
     let content;
     if (!task || !task.attributes) {
-      content = <CRMContainer>
+      content = <CustomCRMContainer>
         <HeaderLine><Header>
           <span>Custom CRM</span>
         </Header></HeaderLine>
         <LargeCaption>
           No task selected
         </LargeCaption>
-      </CRMContainer>
+      </CustomCRMContainer>
     } else if (!task.attributes.account_data) {
-      content = <CRMContainer>
+      content = <CustomCRMContainer>
         <HeaderLine><Header>
           <span>Custom CRM</span>
         </Header></HeaderLine>
         <LargeCaption>
           No customer data found
         </LargeCaption>
-      </CRMContainer>
+      </CustomCRMContainer>
     } else {
-      content = <CRMContainer>
+      content = <CustomCRMContainer>
         <div>
           <ProfilePhoto alt="" src={CRM_baseurl + task.attributes.account_data.img_src}></ProfilePhoto>
         </div>
@@ -36,13 +47,24 @@ class CustomCRM extends React.Component {
           <Value>Customer Profile</Value>
         </Header></HeaderLine>
         <LargeCaption>
-          {task.attributes.account_data.first_name} {task.attributes.account_data.last_name}
+          {
+            /*
+            * ✏️ Challenge 2/3:
+            * Retrieve customer's first and last name from Task attributes's `account_data` key
+            * task.attributes.???.first_name + " " + task.attributes.???.last_name
+            */
+            task.attributes.account_data.first_name + " " + task.attributes.account_data.last_name
+          }
         </LargeCaption>
         <div>
           <Label>Address</Label>
         </div><div>
           <Value>{task.attributes.account_data.address}</Value>
-          <Value>{task.attributes.account_data.city}, {task.attributes.account_data.state}, {task.attributes.account_data.zip}</Value>
+          <Value>
+            {task.attributes.account_data.city},&nbsp;
+            {task.attributes.account_data.state},&nbsp;
+            {task.attributes.account_data.zip}
+          </Value>
         </div>
         <div>
           <Label>Date of Birth</Label>
@@ -59,7 +81,7 @@ class CustomCRM extends React.Component {
         </div><div>
           <Value>{task.attributes.account_data.account_balance}</Value>
         </div>
-      </CRMContainer>;
+      </CustomCRMContainer>;
     }
     return <Canvas>
       {content}
@@ -134,8 +156,12 @@ const Canvas = styled("div")`
   background-color: ${props => props.theme.TaskCanvas.Container.background};
 `;
 
-const CRMContainer = styled("div")`
-  color: ${props => props.theme.calculated.textColor};
+const CustomCRMContainer = styled("div")`
+  color: ${props => props.theme.calculated.textColor /*
+  * ✏️ Challenge 3/3: 
+  * Replace 'MidnightBlue' with some theme color, e.g. calculated.textColor
+  * color: ${props => props.theme.??? };
+  */};
   align-items: center;
   display: flex;
   flex-basis: auto;
