@@ -10,7 +10,7 @@ $twilio = new Client($sid, $token);
 $notification = $twilio->notify->v1->services("ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
                                    ->notifications
                                    ->create(array(
-                                                "body" => "Knok-Knok! This is your first Notify SMS",
+                                                "body" => "Knock-Knock! This is your first Notify SMS",
                                                 "toBinding" => array(
                                                     "toBinding" => "{\"binding_type\":\"sms\", \"address\":\"+1651000000000\"}",
                                                     "toBinding" => "{\"binding_type\":\"sms\", \"address\":\"+1651000000001\"}"

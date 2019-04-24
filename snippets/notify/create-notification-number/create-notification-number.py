@@ -9,7 +9,7 @@ notification = client.notify \
                      .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX') \
                      .notifications \
                      .create(
-                          body='Knok-Knok! This is your first Notify SMS',
+                          body='Knock-Knock! This is your first Notify SMS',
                           to_binding= [
                             json.dumps({'binding_type': 'sms','address': '+1651000000000'}),
                             json.dumps({'binding_type': 'sms','address': '+1651000000001'})

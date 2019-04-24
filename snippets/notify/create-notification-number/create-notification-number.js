@@ -8,7 +8,7 @@ const client = require('twilio')(accountSid, authToken);
 client.notify
   .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
   .notifications.create({
-    body: 'Knok-Knok! This is your first Notify SMS',
+    body: 'Knock-Knock! This is your first Notify SMS',
     toBinding: [
       JSON.stringify({
         binding_type: 'sms',

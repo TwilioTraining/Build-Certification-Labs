@@ -28,7 +28,7 @@ class Program
         };
 
     var notification = NotificationResource.Create(
-        body: "Knok-Knok! This is your first Notify SMS",
+        body: "Knock-Knock! This is your first Notify SMS",
         toBinding: toBinding,
         pathServiceSid: "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     );

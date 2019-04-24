@@ -9,7 +9,7 @@ notification = @client.notify
                       .services('ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                       .notifications
                       .create(
-                         body: 'Knok-Knok! This is your first Notify SMS',
+                         body: 'Knock-Knock! This is your first Notify SMS',
                          to_binding: [
                          	 {
                              'binding_type' => 'sms',
