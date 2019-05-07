@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Say>You are now being place into a Twilio conference.</Say>
+  <Dial><Conference>Room 1234</Conference></Dial>
+</Response>
