@@ -13,9 +13,9 @@ numbers.forEach(number => {
   client.calls
   .create({
     url: 'http://demo.twilio.com/docs/voice.xml', // Your TwiML Bin URL here.
-    to: 'number',
+    to: number,
     from: '+15017122661' // Your Twilio number here.
   })
-  .then(call => console.log(call.sid));
+  .then(call => console.log(call.sid)).done();
   
 });
