@@ -14,4 +14,5 @@ client
       phoneNumber: number.phoneNumber,
     });
   })
-  .then(purchasedNumber => console.log(purchasedNumber.sid));
+  .then(purchasedNumber => console.log(purchasedNumber.sid))
+  .done();
