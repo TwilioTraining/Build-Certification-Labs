@@ -1,19 +1,11 @@
-using System;
-using Twilio;
+const string accountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+const string authToken = "your_auth_token";
 
-class Example
-{
-  static void Main(string[] args)
-  {
-    // Find your Account Sid and Auth Token at twilio.com/user/account
-    string AccountSid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-    string AuthToken = "your_auth_token";
-    var twilio = new TwilioRestClient(AccountSid, AuthToken);
+TwilioClient.Init(accountSid, authToken);
 
-    var message = twilio.SendMessageWithService(
-        "MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "+15558675310",
-        "Phantom Menace was clearly the best of the prequel trilogy."
-    );
-    Console.WriteLine(message.Sid);
-  }
-}
+var message = MessageResource.Create(
+    messagingServiceSid: "MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    to: new Twilio.Types.PhoneNumber("+15558675310"),
+    body: "Phantom Menace was clearly the best of the prequel trilogy."
+);
+Console.WriteLine(message.Sid);
